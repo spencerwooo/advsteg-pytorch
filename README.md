@@ -16,12 +16,12 @@ Then activate the environment:
 conda activate advsteg
 ```
 
-*[Mamba](https://github.com/mamba-org/mamba) (drop-in replacement for conda) is also supported and is what I used for training.*
+*[Mamba](https://github.com/mamba-org/mamba) (drop-in replacement for conda) is also supported and is what I myself use.*
 
-Dev-dependencies are defined and installed with Poetry:
+Other dependencies are defined and installed with Poetry:
 
 ```bash
-# Inside the conda-created environment
+# Inside the virtual environment
 poetry install
 ```
 
@@ -30,10 +30,16 @@ poetry install
 To start training, download the [CelebA (Align&Cropped Images)](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html) dataset and extract it to `data/celeba`. Then run:
 
 ```bash
-python train.py --cuda --batch-size=128 --epochs=100 --fraction=0.25
+python train.py --cuda --batch-size=128 --epochs=100 --fraction=0.1
 ```
 
-This loads up 1/4 of the CelebA dataset, which approximates to 50,000 images. For 100 epochs, this trains for a little over an hour with default parameters on a single RTX 3090 (~50 seconds each epoch).
+This loads up 10% of the CelebA dataset, which approximates to 20,000 images. For 100 epochs, this trains for a little over 30 minutes with default parameters on a single RTX 3090 (~20 seconds each epoch).
+
+To train on all CelebA images for 500 epochs (as in the paper):
+
+```bash
+python train.py --cuda --batch-size=256 --epochs=500
+```
 
 ## Results
 
