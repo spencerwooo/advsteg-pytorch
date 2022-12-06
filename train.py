@@ -7,9 +7,7 @@ import torch.optim as optim
 from rich import print
 
 import wandb
-from advsteg.alice import AliceEncoder
-from advsteg.bob import BobDecoder
-from advsteg.eve import EveSteganalyzer
+from advsteg import AliceEncoder, BobDecoder, EveSteganalyzer
 from advsteg.utils import load_celeba, track_metric, weights_init
 
 
@@ -173,8 +171,8 @@ def main(
                 if i % 1000 == 0:
                     wandb.log(
                         {
-                            "cover image": wandb.Image(images[0]),
-                            "stego image": wandb.Image(stego_images[0]),
+                            "cover_image": wandb.Image(images[0]),
+                            "stego_image": wandb.Image(stego_images[0]),
                         }
                     )
 
