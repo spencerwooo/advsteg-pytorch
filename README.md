@@ -1,6 +1,6 @@
 # advsteg-pytorch ![Python 3.10](https://img.shields.io/badge/Python%203.10-297ca0?logo=python&logoColor=white) [![Support Weights & Biases](https://img.shields.io/badge/Weights_&_Biases-FFCC33?logo=WeightsAndBiases&logoColor=black)](https://wandb.ai) [![License MIT](https://img.shields.io/github/license/spencerwooo/advsteg-pytorch)](./LICENSE) [![Code style: black](https://img.shields.io/badge/code%20style-black-000000)](https://github.com/psf/black)
 
-A PyTorch implementation of the NeurIPS 2017 paper: [Generating Steganographic Images via Adversarial Training](https://papers.nips.cc/paper/2017/hash/fe2d010308a6b3799a3d9c728ee74244-Abstract.html).
+This is my attempt at reproducing the NeurIPS 2017 paper: [Generating Steganographic Images via Adversarial Training](https://papers.nips.cc/paper/2017/hash/fe2d010308a6b3799a3d9c728ee74244-Abstract.html) in modern PyTorch. I have not tested all declared experimental results in the paper, but basic functionality should be all available here.
 
 ## Usage
 
@@ -30,6 +30,8 @@ poetry install
 ## Results
 
 ## Notes on training
+
+The model proposed in the paper highly resembles the [DCGAN](https://dblp.org/rec/journals/corr/RadfordMC15.html) architecture, but with a few differences:
 
 ## Related
 
