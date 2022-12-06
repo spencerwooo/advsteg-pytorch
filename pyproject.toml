@@ -5,16 +5,18 @@ description = "Generating Steganographic Images via Adversarial Training"
 authors = ["spencerwooo <spencer.woo@outlook.com>"]
 license = "MIT"
 readme = "README.md"
-packages = [{include = "advsteg_pytorch"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
+rich = "^12.6.0"
+wandb = "^0.13.5"
 
 [tool.poetry.group.dev.dependencies]
 black = "^22.10.0"
 ruff = "^0.0.163"
 isort = "^5.10.1"
-wandb = "^0.13.5"
+mypy = "^0.991"
+pre-commit = "^2.20.0"
 
 [build-system]
 requires = ["poetry-core"]
