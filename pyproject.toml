@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "advsteg-pytorch"
+version = "0.1.0"
+description = "Generating Steganographic Images via Adversarial Training"
+authors = ["spencerwooo <spencer.woo@outlook.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "advsteg_pytorch"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.group.dev.dependencies]
+black = "^22.10.0"
+ruff = "^0.0.163"
+isort = "^5.10.1"
+wandb = "^0.13.5"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
