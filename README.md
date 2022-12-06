@@ -43,6 +43,36 @@ python train.py --cuda --batch-size=256 --epochs=500
 
 ## Results
 
+### Basic
+
+Loss curves on the first 100 epochs trained with 10% of the dataset:
+
+|                                                      abnet                                                      |                                                      enet                                                      |                                                      b_l2                                                      |
+| :-------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------: |
+| ![abnet](https://user-images.githubusercontent.com/32114380/205899186-6cafc092-9aa3-4226-b9ea-d9beccf4bb8a.png) | ![enet](https://user-images.githubusercontent.com/32114380/205899203-3f8ea08f-6153-4a45-b4b0-af9e17023369.png) | ![b_l2](https://user-images.githubusercontent.com/32114380/205899236-15f2e27f-23f8-46ef-9465-adab187e3e2f.png) |
+
+Generated steganographic images:
+
+![steganographic images](https://user-images.githubusercontent.com/32114380/205900052-dafe92e7-6100-40e5-84d3-e94c93743cde.png)
+
+### Full experiment
+
+Loss curves on the entire CelebA dataset for 500 epochs:
+
+[Loss curves to be added]
+
+Generated steganographic images:
+
+[Demo images to be added]
+
+### FYI
+
+Cover images:
+
+![cover](https://user-images.githubusercontent.com/32114380/205899913-9c2f75c4-3d57-4608-85b9-bd99efa6bc9b.png)
+
+Check under [./notebooks/](notebooks/visualize.ipynb) for more information.
+
 ## Notes on training
 
 The model proposed in the paper highly resembles the [DCGAN](https://dblp.org/rec/journals/corr/RadfordMC15.html) architecture, but with a few differences:
