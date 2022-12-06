@@ -510,7 +510,7 @@ sweeps = ["sweeps (>=0.2.0)"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "076250fefdd980ca4a9789dcfe61a0f13a010d37ee2e5272915c204262262638"
+content-hash = "eecc68a5d893433b5732ad831403f1c4aeb182c519e042ef8508a30e1439a62a"
 
 [metadata.files]
 black = [

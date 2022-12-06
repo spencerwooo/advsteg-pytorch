@@ -1,5 +1,8 @@
 # Dataset folder
-dataset/
+data/
+# Runs and wandb folder
+runs/
+wandb/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
