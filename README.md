@@ -27,6 +27,14 @@ poetry install
 
 [Weights & Biases](https://wandb.ai/) is used for logging and visualization. You can either create an account and login with `wandb login` or add the environment variable `WANDB_MODE=disabled` to disable logging.
 
+To start training, download the [CelebA (Align&Cropped Images)](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html) dataset and extract it to `data/celeba`. Then run:
+
+```bash
+python train.py --cuda --batch-size=128 --epochs=100 --fraction=0.25
+```
+
+This loads up 1/4 of the CelebA dataset, which approximates to 50,000 images. For 100 epochs, this trains for a little over an hour with default parameters on a single RTX 3090 (~50 seconds each epoch).
+
 ## Results
 
 ## Notes on training

@@ -4,9 +4,9 @@ import click
 import torch
 import torch.nn as nn
 import torch.optim as optim
-import wandb
 from rich import print
 
+import wandb
 from advsteg.alice import AliceEncoder
 from advsteg.bob import BobDecoder
 from advsteg.eve import EveSteganalyzer
@@ -171,11 +171,10 @@ def main(
 
                 # Log generated images
                 if i % 1000 == 0:
-                    # Log first 5 images
                     wandb.log(
                         {
-                            "cover image": wandb.Image(images[:5]),
-                            "stego image": wandb.Image(stego_images[:5]),
+                            "cover image": wandb.Image(images[0]),
+                            "stego image": wandb.Image(stego_images[0]),
                         }
                     )
 
