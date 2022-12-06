@@ -33,6 +33,20 @@ poetry install
 
 The model proposed in the paper highly resembles the [DCGAN](https://dblp.org/rec/journals/corr/RadfordMC15.html) architecture, but with a few differences:
 
+| Model | Same as DCGAN's ... | What changes?                                                                                  | Why                                                                        | Role         |
+| ----- | ------------------- | ---------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- | ------------ |
+| Alice | Generator           | First layer swapped to a Linear layer.                                                         | So that the secret message can be embedded into the flattened cover image. | Encoder      |
+| Bob   | Discriminator       | Final layer swapped to a Linear layer with an output of the same length as the secret message. | So that Bob can decode the secret message embedded by Alice.               | Decoder      |
+| Eve   | Discriminator       | Final layer swapped to a Linear layer with an output channel of one.                           | So that Eve can distinguish cover images from stego images.                | Steganalyzer |
+
+Changes to the training procedure that I had to make to get the model to train:
+
+1. Learning rate is set to 1e-4 instead of 2e-4.
+2. Input `image_size` is changed to 109 and `output_size` is changed to 64.
+3. SGD is used for optimizing Eve instead of Adam: as Eve was getting too good (discriminator's loss drops to 0 very quickly).
+
+The paper trained for 500 epochs, but I found that losses started to converge already after 100 epochs.
+
 ## Related
 
 The author's original TensorFlow implementation is available at [jhayes14/advsteg](https://github.com/jhayes14/advsteg).
