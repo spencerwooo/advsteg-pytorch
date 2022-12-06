@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "advsteg-pytorch"
+name = "advsteg"
 version = "0.1.0"
-description = "Generating Steganographic Images via Adversarial Training"
+description = "PyTorch implementation of Generating Steganographic Images via Adversarial Training"
 authors = ["spencerwooo <spencer.woo@outlook.com>"]
 license = "MIT"
 readme = "README.md"
@@ -13,6 +13,8 @@ wandb = "^0.13.5"
 click = "^8.1.3"
 numpy = "^1.23.5"
 pillow = "^9.3.0"
+ipykernel = "^6.17.1"
+matplotlib = "^3.6.2"
 
 [tool.poetry.group.dev.dependencies]
 black = "^22.10.0"
